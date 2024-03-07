@@ -1,0 +1,56 @@
+[
+  {
+    "id": "11",
+    "img": "豆花",
+    "src": "./imgs/answerSweets/豆花.jpg",
+    "link": "https://zh-tw.photo-ac.com/"
+  },
+  {
+    "id": "21",
+    "img": "仙草",
+    "src": "./imgs/answerSweets/仙草.jpg",
+    "link": "https://zh-tw.photo-ac.com/"
+  },
+  {
+    "id": "31",
+    "img": "紅豆餅",
+    "src": "./imgs/answerSweets/紅豆餅.jpg",
+    "link": "https://udn.com/news/story/120911/4668478"
+  },
+  {
+    "id": "12",
+    "img": "千層派",
+    "src": "./imgs/answerSweets/千層派.jpeg",
+    "link": "https://food.ltn.com.tw/article/10483"
+  },
+  {
+    "id": "22",
+    "img": "黑森林蛋糕",
+    "src": "./imgs/answerSweets/黑森林蛋糕.jpg",
+    "link": "https://zh-tw.photo-ac.com/"
+  },
+  {
+    "id": "32",
+    "img": "馬卡龍",
+    "src": "./imgs/answerSweets/馬卡龍.jpg",
+    "link": "https://zh-tw.photo-ac.com/"
+  },
+  {
+    "id": "13",
+    "img": "奶油泡芙",
+    "src": "./imgs/answerSweets/奶油泡芙.jpg",
+    "link": "https://zh-tw.photo-ac.com/"
+  },
+  {
+    "id": "23",
+    "img": "冰淇淋",
+    "src": "./imgs/answerSweets/冰淇淋.jpg",
+    "link": "https://zh-tw.photo-ac.com/"
+  },
+  {
+    "id": "33",
+    "img": "水果塔",
+    "src": "./imgs/answerSweets/水果塔.jpeg",
+    "link": "https://nkhhs.kmhjh.kh.edu.tw/files/132-1000-705,r18-1.php?Lang=zh-tw"
+  }
+]
