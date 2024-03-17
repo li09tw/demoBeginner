@@ -3,12 +3,11 @@ import answerData from "./datas/answer.json";
 import { useNavigate } from "react-router-dom";
 
 /* 
-2.https://www.surveymonkey.com/
-https://www.mailgun.com/ 付費
+
 1.https://react.dev/reference/react-dom/components/select
-3.https://react.dev/reference/react-dom/components/input
-4.if-else
-5.switch
+2.https://react.dev/reference/react-dom/components/input
+3.if-else
+
 */
 
 export default function FunnySurvey() {
@@ -36,21 +35,29 @@ export default function FunnySurvey() {
     } */
 
     if (modeSwitch == "selected") {
-      answerData.map((el, key) => {
-        /*       console.log(key);
+      if (nickname < 3 || answer1 < 1 || answer3 < 1) {
+        navigate("FunnySurvey");
+      } else {
+        answerData.map((el, key) => {
+          /*       console.log(key);
       console.log(el); */
-        const finalID = answer1 + answer3;
-        if (el.id == finalID) {
-          /*  console.log("found" + key); */
+          const finalID = answer1 + answer3;
+          if (el.id == finalID) {
+            /*  console.log("found" + key); */
 
-          /* 最後傳送出去答案對應的資料編號 */
-          /*    navigate("/DateTime"); */
-          navigate(`/FunnySAnswer/${key}/${nickname}`);
-        }
-      });
+            /* 最後傳送出去答案對應的資料編號 */
+            /*    navigate("/DateTime"); */
+            navigate(`/FunnySAnswer/${key}/${nickname}`);
+          }
+        });
+      }
     } else {
-      const randomNumber = Math.random() * (8 - 0) + 0;
-      navigate(`/FunnySAnswer/${randomNumber}/${nickname}`);
+      if (nickname < 3) {
+        navigate("FunnySurvey");
+      } else {
+        const randomNumber = Math.floor(Math.random() * (8 - 0) + 0);
+        navigate(`/FunnySAnswer/${randomNumber}/${nickname}`);
+      }
     }
   };
 
@@ -79,6 +86,7 @@ export default function FunnySurvey() {
               <label>Email 填入示範： </label>
               <input
                 type="email"
+                className="Survey-inputText-style"
                 placeholder="此資料不送出任何地方，僅提供觀用"
                 pattern=".+@example\.com"
                 size="50"
@@ -101,11 +109,11 @@ export default function FunnySurvey() {
             </div>
             <div className="middle-middle">
               <div className="Survey-question">
-                <div className="middle-middle ">
+                <div className="middle-middle Survey-option-style">
                   <p>可以用什麼顏色形容今天的心情呢？</p>
                 </div>
-                <div className="middle-middle ">
-                  <label>
+                <div className="middle-middle Survey-option-style">
+                  <label className="Survey-option-style-single">
                     <input
                       type="radio"
                       value="1"
@@ -114,7 +122,7 @@ export default function FunnySurvey() {
                     />
                     粉紅色
                   </label>
-                  <label>
+                  <label className="Survey-option-style-single">
                     <input
                       type="radio"
                       value="2"
@@ -123,7 +131,7 @@ export default function FunnySurvey() {
                     />
                     暗色
                   </label>
-                  <label>
+                  <label className="Survey-option-style-single">
                     <input
                       type="radio"
                       value="3"
@@ -137,31 +145,31 @@ export default function FunnySurvey() {
             </div>
             <div className="middle-middle">
               <div className="Survey-question">
-                <div className="middle-middle">
+                <div className="middle-middle Survey-option-style">
                   <p>今天的氣溫的感覺是? </p>
                 </div>
-                <div className="middle-middle">
-                  <label>
+                <div className="middle-middle Survey-option-style">
+                  <label className="Survey-option-style-single">
                     <input type="radio" value="cool" name="Q2" />
                     舒爽
                   </label>
-                  <label>
+                  <label className="Survey-option-style-single">
                     <input type="radio" value="hot" name="Q2" />
                     悶熱
                   </label>
-                  <label>
+                  <label className="Survey-option-style-single">
                     <input type="radio" value="cold" name="Q2" />冷
                   </label>
                 </div>
               </div>
             </div>
             <div className="middle-middle">
-              <div className="Survey-question">
-                <div className="middle-middle">
+              <div className="Survey-question ">
+                <div className="middle-middle Survey-option-style">
                   <p>今天的你</p>
                 </div>
-                <div className="middle-middle">
-                  <label>
+                <div className="middle-middle Survey-option-style">
+                  <label className="Survey-option-style-single">
                     <input
                       type="radio"
                       value="1"
@@ -170,7 +178,7 @@ export default function FunnySurvey() {
                     />
                     很Local
                   </label>
-                  <label>
+                  <label className="Survey-option-style-single">
                     <input
                       type="radio"
                       value="2"
@@ -179,7 +187,7 @@ export default function FunnySurvey() {
                     />
                     很優雅
                   </label>
-                  <label>
+                  <label className="Survey-option-style-single">
                     <input
                       type="radio"
                       value="3"
@@ -200,27 +208,26 @@ export default function FunnySurvey() {
                 rows="10"
                 cols="33"
                 required
-                placeholder="此為示範區域，請輸入內容"
+                placeholder="此為示範「多行文字」區域，請輸入內容，內容不會被送出任何地方"
                 onChange={(e) => {
                   setMultiTexts(e.target.value);
                 }}
               ></textarea>
             </div>
-
             <div className="middle-middle ">
               <p>{MultiTexts}</p>
             </div>
           </div>
-          <div className="middle-middle">
-            <button
-              type="submit"
-              className="Survey-btn-submit"
-              onClick={btnSubmitSurvey}
-            >
-              送出
-            </button>
-          </div>
         </section>
+        <div className="middle-middle" style={{ marginBottom: "4rem" }}>
+          <button
+            type="submit"
+            className="Survey-btn-submit"
+            onClick={btnSubmitSurvey}
+          >
+            送出
+          </button>
+        </div>
       </div>
     </>
   );

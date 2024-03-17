@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import moment from "moment";
-/* import "moment/locale/zh-tw"; */
+import "moment/locale/zh-tw";
 
 /* 
 
@@ -51,15 +51,17 @@ export default function DateTime() {
   };
 
   return (
-    <div className="App">
+    <div style={{ marginBottom: "2rem" }}>
       <div>
-        <h1 className="middle-middle">國中會考 倒數日期</h1>
-        <h2 className="middle-middle">
+        <h1 className="middle-middle" style={{ marginTop: "2rem" }}>
+          國中會考 倒數日期
+        </h1>
+        <h2 className="middle-middle" style={{ marginTop: "1rem" }}>
           {String(endDate.locale("zh-tw").format("LLLL"))}
         </h2>
       </div>
-      <select></select>
-      <div className="middle-middle">
+
+      <div className="middle-middle" style={{ marginTop: "2rem" }}>
         <h6>點選-&gt; </h6>
         <button onClick={monthsDisplay} className="btn-All btn-date-toggle ">
           <p>顯示幾個月？</p>

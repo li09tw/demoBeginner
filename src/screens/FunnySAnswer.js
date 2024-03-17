@@ -28,7 +28,7 @@ export default function FunnySAnswer() {
           </div>
           <div className="middle-middle">
             <a href={srcAddress}>
-              <p className="img-link-p">圖片來源</p>
+              <p className="img-link-p">點此進入圖片來源</p>
             </a>
           </div>
         </section>

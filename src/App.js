@@ -4,6 +4,8 @@ import DateTime from "./screens/DateTime";
 import FunnySurvey from "./screens/FunnySurvey";
 import FunnySAnswer from "./screens/FunnySAnswer";
 import FunnySurvey2 from "./screens/FunnySurvey2";
+import ContactUs from "./screens/ContactUs";
+import Home from "./screens/Home";
 
 /* 
 Router
@@ -17,22 +19,30 @@ function App() {
         <BrowserRouter>
           <section className="app-header  ">
             {/* --------Header  導覽、聯絡我們（自媒體）------ */}
-            <p className="middle-middle "> Start your project </p>
-            <div className="header-link-group">
-              <Link to="DateTime" className="link-all header-link">
-                Date and Time
-              </Link>
-              <Link to="FunnySurvey" className="link-all header-link">
-                Funny Survey
-              </Link>
-              <Link to="FunnySurvey2" className="link-all header-link">
-                Funny Survey 2
-              </Link>
+            <div className="header-upper">
+              <div className="header-left">LOGO</div>
+              <div className="header-right">
+                <div className="header-link-group">
+                  <Link to="/" className="link-all header-link">
+                    首頁
+                  </Link>
+                  <Link to="/DateTime" className="link-all header-link">
+                    學測倒數日期
+                  </Link>
+                  <Link to="/FunnySurvey" className="link-all header-link">
+                    趣味問卷
+                  </Link>
+                  <Link to="/FunnySurvey2" className="link-all header-link">
+                    趣味問卷2
+                  </Link>
+                </div>
+              </div>
             </div>
           </section>
-          <section className="app-body ">
+          <section className="app-body">
             {/* --------body  展示區域------ */}
             <Routes>
+              <Route path="/" element={<Home />} />
               <Route path="/DateTime" element={<DateTime />} />
               <Route path="/FunnySurvey" element={<FunnySurvey />} />
               <Route path="/FunnySurvey2" element={<FunnySurvey2 />} />
@@ -40,11 +50,20 @@ function App() {
                 path="/FunnySAnswer/:answerID/:nickname"
                 element={<FunnySAnswer />}
               />
+              <Route path="/ContactUs" element={<ContactUs />} />
             </Routes>
           </section>
-          <section className="app-footer middle-middle">
+          <section className="app-footer">
             {/* --------footer  隱私權、著作權聲明、聯絡我們（商城）------ */}
-            <p className="footer-p">This is footer</p>
+            <div>
+              <Link to="/ContactUs" className="link-all footer-p ">
+                聯繫我們
+              </Link>
+              <p className="link-all footer-p ">隱私權聲明（cookies）</p>
+            </div>
+            <div>
+              <p className="footer-p "> 著作權©2024 Zora Li </p>
+            </div>
           </section>
         </BrowserRouter>
       </div>
