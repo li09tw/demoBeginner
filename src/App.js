@@ -6,6 +6,8 @@ import FunnySurvey from "./screens/FunnySurvey";
 import FunnySAnswer from "./screens/FunnySAnswer";
 import FunnySurvey2 from "./screens/FunnySurvey2";
 import ContactUs from "./screens/ContactUs";
+import MemberManage from "./screens/MemberManage";
+import MemberSignin from "./screens/MemberSignin";
 import Home from "./screens/Home";
 import { useState, useEffect } from "react";
 
@@ -36,6 +38,9 @@ function App() {
               <div className="">{width}</div>
               <div className="">
                 <div className="header-link-group">
+                  <Link to="/Signin" className="link-all header-signin-link">
+                    登入
+                  </Link>
                   <Link to="/" className="link-all header-link">
                     首頁
                   </Link>
@@ -99,6 +104,8 @@ function App() {
             {/* --------body  展示區域------ */}
             <Routes>
               <Route path="/" element={<Home />} />
+              <Route path="Signin" element={<MemberSignin />} />
+              <Route path="/Member" element={<MemberManage />} />
               <Route path="/DateTime" element={<DateTime />} />
               <Route path="/FunnySurvey" element={<FunnySurvey />} />
               <Route path="/FunnySurvey2" element={<FunnySurvey2 />} />
