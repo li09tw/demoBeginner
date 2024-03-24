@@ -16,52 +16,54 @@ import photoCompany from "./imgs/公司.jpeg";
 export default function ContactUs() {
   return (
     <>
-      <div className="middle-middle ">
-        <h2>聯繫我們</h2>
-      </div>
-      <div className="middle-middle ">
-        <section className="Contact-info-section">
-          <div className="middle-middle ">
-            <a href="https://www.travel.taipei/zh-cn/attraction/details/19">
-              <img src={photoCompany} alt="故宮" />
-            </a>
-          </div>
-          <div className="middle-middle ">
-            <p className="img-link-p"> 圖片來源:故宮</p>
-          </div>
-        </section>
-        <section className="Contact-info-section">
-          <div style={{ marginBottom: "1rem" }}>
+      <div>
+        <div className="middle-middle ">
+          <h2>聯繫我們</h2>
+        </div>
+        <div className="middle-middle ">
+          <section className="Contact-info-section">
             <div className="middle-middle ">
-              <p className="contact-link">聯繫電話：</p>
-              <a href="tel:+886.123456789" className="contact-link">
-                +886 123456789
+              <a href="https://www.travel.taipei/zh-cn/attraction/details/19">
+                <img src={photoCompany} alt="故宮" />
               </a>
             </div>
             <div className="middle-middle ">
-              <p className="contact-link">(僅供參考，用手機點選後撥號)</p>
+              <p className="img-link-p"> 圖片來源:故宮</p>
             </div>
-          </div>
-          <div style={{ marginBottom: "1rem" }}>
-            <div className="middle-middle ">
-              <p className="contact-link">服務信箱：</p>
-              <a href="mailto:demo@gmail.com" className="contact-link">
-                demo@gmail.com
-              </a>
+          </section>
+          <section className="Contact-info-section">
+            <div style={{ marginBottom: "1rem" }}>
+              <div className="middle-middle ">
+                <p className="contact-link">聯繫電話：</p>
+                <a href="tel:+886.123456789" className="contact-link">
+                  +886 123456789
+                </a>
+              </div>
+              <div className="middle-middle ">
+                <p className="contact-link">(僅供參考，用手機點選後撥號)</p>
+              </div>
             </div>
-            <div className="middle-middle ">
-              <p className="contact-link">(僅供參考，點選後出現郵箱服務)</p>
+            <div style={{ marginBottom: "1rem" }}>
+              <div className="middle-middle ">
+                <p className="contact-link">服務信箱：</p>
+                <a href="mailto:demo@gmail.com" className="contact-link">
+                  demo@gmail.com
+                </a>
+              </div>
+              <div className="middle-middle ">
+                <p className="contact-link">(僅供參考，點選後出現郵箱服務)</p>
+              </div>
+            </div>{" "}
+            <div style={{ marginBottom: "1rem" }}>
+              <div className="middle-middle ">
+                <p className="contact-link">公司地址：</p>
+              </div>
+              <div className="middle-middle ">
+                <p className="contact-link">桃園市幸福區仁義路123號</p>
+              </div>
             </div>
-          </div>{" "}
-          <div style={{ marginBottom: "1rem" }}>
-            <div className="middle-middle ">
-              <p className="contact-link">公司地址：</p>
-            </div>
-            <div className="middle-middle ">
-              <p className="contact-link">桃園市幸福區仁義路123號</p>
-            </div>
-          </div>
-        </section>
+          </section>
+        </div>
       </div>
     </>
   );

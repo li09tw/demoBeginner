@@ -1,4 +1,5 @@
 import "./App.css";
+import useRWD from "./components/RWD";
 import { BrowserRouter, Link, Route, Routes } from "react-router-dom";
 import DateTime from "./screens/DateTime";
 import FunnySurvey from "./screens/FunnySurvey";
@@ -6,6 +7,7 @@ import FunnySAnswer from "./screens/FunnySAnswer";
 import FunnySurvey2 from "./screens/FunnySurvey2";
 import ContactUs from "./screens/ContactUs";
 import Home from "./screens/Home";
+import { useState, useEffect } from "react";
 
 /* 
 Router
@@ -13,6 +15,17 @@ html tag div, p, section,  https://developer.mozilla.org/en-US/docs/Web/HTML & p
 */
 
 function App() {
+  const [surveyDisplay, setSurveyDisplay] = useState(false);
+
+  const [width, setWidth] = useState(window.innerWidth);
+  useEffect(() => {
+    const handleResize = () => setWidth(window.innerWidth);
+    window.addEventListener("resize", handleResize);
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
   return (
     <>
       <div className="app">
@@ -20,8 +33,8 @@ function App() {
           <section className="app-header  ">
             {/* --------Header  導覽、聯絡我們（自媒體）------ */}
             <div className="header-upper">
-              <div className="header-left">LOGO</div>
-              <div className="header-right">
+              <div className="">{width}</div>
+              <div className="">
                 <div className="header-link-group">
                   <Link to="/" className="link-all header-link">
                     首頁
@@ -29,12 +42,55 @@ function App() {
                   <Link to="/DateTime" className="link-all header-link">
                     學測倒數日期
                   </Link>
-                  <Link to="/FunnySurvey" className="link-all header-link">
-                    趣味問卷
-                  </Link>
-                  <Link to="/FunnySurvey2" className="link-all header-link">
-                    趣味問卷2
-                  </Link>
+                  {surveyDisplay ? (
+                    <>
+                      <div
+                        className="link-all header-link"
+                        onMouseOver={() => {
+                          setSurveyDisplay(true);
+                        }}
+                      >
+                        趣味問卷
+                        <div
+                          style={{
+                            display: "flex",
+                            flexDirection: "column",
+                          }}
+                          onMouseOut={() => {
+                            setSurveyDisplay(false);
+                          }}
+                        >
+                          <div>
+                            <Link
+                              to="/FunnySurvey"
+                              className="link-all header-link"
+                            >
+                              選擇型
+                            </Link>
+                          </div>
+                          <div>
+                            <Link
+                              to="/FunnySurvey2"
+                              className="link-all header-link"
+                            >
+                              分數型
+                            </Link>
+                          </div>
+                        </div>
+                      </div>
+                    </>
+                  ) : (
+                    <>
+                      <div
+                        className="link-all header-link"
+                        onMouseEnter={() => {
+                          setSurveyDisplay(true);
+                        }}
+                      >
+                        趣味問卷
+                      </div>
+                    </>
+                  )}
                 </div>
               </div>
             </div>

@@ -5,8 +5,11 @@ export default () => {
         <section className="section">
           <div className="section-01-p">歡迎加入 React 初學網頁設計</div>
           <div className="section-01-p-2">
-            我是你們的雲端助教Zora，背景是資訊管系畢業，因為總是上網去搜一些小工具來讓自己的生活更便利，於是便開啟了寫App的生活，殊不知，寫IOS原生App的硬體規格要求有點高，被朋友慫恿後，先跑來學React，摸了之後覺得這個框架很有趣也很友善，所以後面轉戰React
-            Native。
+            我是你們的雲端助教Zora，背景是資訊管系畢業，因為總是上網去搜一些小工具來讓自己的生活更便利，於是便嘗試原生App的生活，殊不知，寫IOS原生App的硬體規格要求有點高。
+          </div>
+          <div className="section-01-p-2">
+            後來被朋友慫恿後，先跑來學React，摸了之後覺得這個框架很有趣也很友善，所以後面轉戰React
+            Native（雙平台app開發）。
           </div>
           <div className="section-01-p-2">不是科班出生？ 沒有關係。</div>
           <div className="section-01-p-2">
@@ -20,8 +23,8 @@ export default () => {
         </section>
 
         <section className="section">
-          <div>這堂課會帶大家一起看：</div>
-          <ol>
+          <div className="section-02-p-1">這堂課會帶大家一起看：</div>
+          <ol className="section-02-li-group">
             <li className="section-02-li">常用 Javascript 基本語法和概念</li>
             <li className="section-02-li">不同產業/不同目的使用的網頁設計</li>
             <li className="section-02-li">常用 CSS 基本語法</li>

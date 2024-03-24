@@ -77,6 +77,14 @@ export default function DateTime() {
       <div className="dateDisplay ">
         <p style={{ marginRight: "1rem" }}>剩</p>
 
+        {Mdisplay || Ddisplay || Hdisplay ? (
+          <></>
+        ) : (
+          <>
+            <div>多久</div>
+          </>
+        )}
+
         {Mdisplay ? (
           <>
             <div className="middle-middle ">

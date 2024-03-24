@@ -15,43 +15,12 @@ p:#000
 
 */
 
-/* 
-todo 
-@media screen and (max-width: 320px) {
-  html {
-    padding: 0;
-    margin: 0;
-    background-color: unset;
-    font-size: unset;
-    font-weight: unset;
-  }
-  .app {
-    background-color: pink;
-  }
-}
- */
-
-/* 
-todo 
-@media screen and (min-width: 321qpx) {
-  html {
-    padding: 0;
-    margin: 0;
-    background-color: unset;
-    font-size: unset;
-    font-weight: unset;
-  }
-  .app {
-    background-color: yellow;
-  }
-}
- */
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 321px) {
   * {
     padding: 0;
     margin: 0;
     background-color: unset;
-    font-size: unset;
+    font-size: 14px;
     font-weight: unset;
   }
 
@@ -107,13 +76,14 @@ todo
     min-height: 10vh;
   }
   .header-link-group {
-    display: flex;
-    align-items: flex-start;
-    justify-content: space-around;
     border-bottom: #f2fefc solid;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
   }
   .header-link {
-    font-size: 0.8rem;
+    font-size: 1rem;
   }
   .header-link:hover {
     color: #417a71;
@@ -123,11 +93,12 @@ todo
   }
 
   .header-upper {
+    display: unset;
+  }
+  .mobile-list-icon {
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin: 1rem 1rem 1rem 1rem;
-    font-size: 0.8rem;
+    align-items: flex-start;
+    justify-content: space-around;
   }
 
   /* -------------------- Footer ------------------- */
@@ -260,16 +231,7 @@ todo
     font-weight: 600;
   }
   .section-02-li {
-    margin: 0.6rem 1rem 0.4rem 1rem;
-    width: 16rem;
-  }
-  .section-02-p-1 {
-    text-align: center;
-  }
-  .section-02-li-group {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    margin: 0.4rem 1rem 0.4rem 1rem;
   }
 
   .section-03-p-1 {
