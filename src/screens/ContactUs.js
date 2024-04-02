@@ -53,13 +53,13 @@ export default function ContactUs() {
               <div className="middle-middle ">
                 <p className="contact-link">(僅供參考，點選後出現郵箱服務)</p>
               </div>
-            </div>{" "}
+            </div>
             <div style={{ marginBottom: "1rem" }}>
               <div className="middle-middle ">
                 <p className="contact-link">公司地址：</p>
               </div>
               <div className="middle-middle ">
-                <p className="contact-link">桃園市幸福區仁義路123號</p>
+                <p className="contact-link">桃園市幸福區希望路666號</p>
               </div>
             </div>
           </section>

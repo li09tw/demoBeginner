@@ -33,95 +33,46 @@ function App() {
     <>
       <div className="app">
         <BrowserRouter>
-          <section className="app-header  ">
-            {/* --------Header  導覽、聯絡我們（自媒體）------ */}
-            <div className="header-upper">
-              <div className="">{width}</div>
-              <div className="nav-display-m">=</div>
-              <div className="nav-display-d">
-                <div className="header-link-group">
-                  <Link to="/Signin" className="link-all header-signin-link">
-                    登入
-                  </Link>
-                  <Link to="/" className="link-all header-link">
-                    首頁
-                  </Link>
-                  <Link to="/DateTime" className="link-all header-link">
-                    學測倒數日期
-                  </Link>
-                  <div
-                    className="link-all header-link link-collection"
-                    onMouseOver={() => {
-                      setSurveyDisplay(true);
-                    }}
-                  >
-                    趣味問卷
-                    <div>
-                      <Link
-                        to="/FunnySurvey"
-                        className="link-all header-link is-active"
-                      >
-                        選擇型
-                      </Link>
-                    </div>
-                    <div>
-                      <Link
-                        to="/FunnySurvey2"
-                        className="link-all header-link is-active"
-                      >
-                        分數型
-                      </Link>
-                    </div>
-                  </div>
-                  {/*  {surveyDisplay ? (
+          <section className="app-header">
+            <div className="nav-display-L">
+              <div className="nav-logo">{width}</div>
+            </div>
+
+            <div className="nav-display-R">
+              <div className="header-link-group">
+                <Link to="/Signin" className="link-all header-signin-link">
+                  登入
+                </Link>
+                <Link to="/" className="link-all header-link">
+                  首頁
+                </Link>
+                <Link to="/DateTime" className="link-all header-link">
+                  學測倒數
+                </Link>
+                <div
+                  className="link-all header-link"
+                  onMouseOver={() => {
+                    setSurveyDisplay(true);
+                  }}
+                  onMouseLeave={() => {
+                    setSurveyDisplay(false);
+                  }}
+                >
+                  趣味問卷
+                  {surveyDisplay ? (
                     <>
-                      <div
-                        className="link-all header-link"
-                        onMouseOver={() => {
-                          setSurveyDisplay(true);
-                        }}
-                      >
-                        趣味問卷
-                        <div
-                          style={{
-                            display: "flex",
-                            flexDirection: "column",
-                          }}
-                          onMouseOut={() => {
-                            setSurveyDisplay(false);
-                          }}
-                        >
-                          <div>
-                            <Link
-                              to="/FunnySurvey"
-                              className="link-all header-link"
-                            >
-                              選擇型
-                            </Link>
-                          </div>
-                          <div>
-                            <Link
-                              to="/FunnySurvey2"
-                              className="link-all header-link"
-                            >
-                              分數型
-                            </Link>
-                          </div>
+                      <div className="header-link-sub">
+                        <div className="link-all ">
+                          <Link to="/FunnySurvey">選擇型</Link>
+                        </div>
+                        <div className="link-all">
+                          <Link to="/FunnySurvey2">分數型</Link>
                         </div>
                       </div>
                     </>
                   ) : (
-                    <>
-                      <div
-                        className="link-all header-link"
-                        onMouseEnter={() => {
-                          setSurveyDisplay(true);
-                        }}
-                      >
-                        趣味問卷
-                      </div>
-                    </>
-                  )} */}
+                    <></>
+                  )}
                 </div>
               </div>
             </div>

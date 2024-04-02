@@ -3,9 +3,8 @@
 
  style > className > * > html  
 
-主要顏色 main-color:#81F4E1
+
 淡色 light-color:#e6fdf9
-淡色 light-color:#f2fefc
 對比色 shade-color:#34625a
 對比色 shade-color:#417a71
 background-color: #fff
@@ -42,12 +41,12 @@ p:#000
   }
 
   .link-all {
-    color: black;
+    color: #190933;
     text-decoration: none;
     padding: 0.2rem 0.4rem 0.2rem 0.4rem;
   }
   .link-all:hover {
-    color: #81f4e1;
+    color: #e6fdf9;
   }
 
   .btn-All {
@@ -72,75 +71,81 @@ p:#000
     font-size: 0.6rem;
   }
 
-  .nav-display-m {
-    display: none;
-  }
-  .nav-display-d {
-    display: flex;
-  }
-  .link-collection {
-    position: relative;
-  }
-  .link-collection:hover:after {
-    content: "top";
-    position: absolute;
-    text-align: center;
-  }
-  .is-active {
-    display: none;
-  }
-
   /* --------------------  Header ------------------- */
 
   .app-header {
+    /*     background-color: #81f4e1; */
     min-height: 10vh;
+    margin: 1rem 1rem 1rem 1rem;
+    padding: 0 1rem 0 1rem;
+  }
+
+  .nav-display-L {
+    float: inline-start;
+  }
+  .nav-display-R {
+    float: inline-end;
+  }
+
+  .nav-logo {
+    width: 6rem;
+    height: 3rem;
+    background-color: #34625a;
   }
   .header-link-group {
     display: flex;
     align-items: flex-start;
     justify-content: space-around;
-    border-bottom: #f2fefc solid;
   }
+
   .header-link {
     font-size: 0.8rem;
+    width: 4rem;
+    text-align: center;
   }
   .header-link:hover {
-    color: #417a71;
-    background-color: #81f4e1;
+    color: #190933;
+    background-color: #e6fdf9;
     padding: 0.2rem 0.4rem 0.2rem 0.4rem;
     border-radius: 0.4rem;
   }
-
-  .header-upper {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin: 1rem 1rem 1rem 1rem;
+  .header-link-sub {
     font-size: 0.8rem;
+    text-align: center;
+    color: #190933;
+    padding: 0.4rem 0 0.6rem 0;
+  }
+  .header-link-sub:hover,
+  .header-link-sub:visited {
+    border-radius: 0.4rem;
+    font-size: 0.8rem;
+    text-align: center;
+    color: #190933;
+    padding: 0.4rem 0 0.6rem 0;
   }
 
-  .header-signin-link {
-    font-size: 0.8rem;
-    color: #000;
-  }
-  .header-signin-link:hover,
+  .header-signin-link,
   .header-signin-link:visited {
     font-size: 0.8rem;
-    color: #34625a;
+    color: #190933;
+  }
+  .header-signin-link:hover {
+    font-size: 0.8rem;
+    color: #417a71;
   }
 
   /* -------------------- Footer ------------------- */
 
   .app-footer {
     /*       background-color: yellow; */
-    min-height: 10vh;
+    min-height: 6vh;
     display: flex;
     align-items: center;
     justify-content: space-around;
     background-color: #34625a;
   }
   .footer-p {
-    /*        background-color: #f2fefc; */
+    /*        background-color: #e6fdf9; */
     color: #fff;
     font-size: 0.7rem;
   }
@@ -150,6 +155,7 @@ p:#000
     display: flex;
     align-items: center;
     justify-content: center;
+    position: sticky;
   }
 
   /*  * Date Time  ========================== */
@@ -190,7 +196,7 @@ p:#000
 
   .Survey-question {
     margin: 2rem 0rem 2rem 0rem;
-    background-color: #f2fefc;
+    background-color: #e6fdf9;
     border-radius: 0.4rem;
     border-style: dotted;
     border-color: #417a71;
@@ -210,7 +216,7 @@ p:#000
 
   .Survey-btn-submit {
     background-color: #fff;
-    border-color: #f2fefc;
+    border-color: #e6fdf9;
     /*     border-style: unset; */
   }
 
