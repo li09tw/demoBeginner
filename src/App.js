@@ -1,5 +1,5 @@
 import "./App.css";
-import useRWD from "./components/RWD";
+import "./App-mini.css";
 import { BrowserRouter, Link, Route, Routes } from "react-router-dom";
 import DateTime from "./screens/DateTime";
 import FunnySurvey from "./screens/FunnySurvey";
@@ -19,6 +19,7 @@ html tag div, p, section,  https://developer.mozilla.org/en-US/docs/Web/HTML & p
 function App() {
   const [surveyDisplay, setSurveyDisplay] = useState(false);
 
+  /* 響應式網頁輔助工具 */
   const [width, setWidth] = useState(window.innerWidth);
   useEffect(() => {
     const handleResize = () => setWidth(window.innerWidth);
@@ -36,7 +37,8 @@ function App() {
             {/* --------Header  導覽、聯絡我們（自媒體）------ */}
             <div className="header-upper">
               <div className="">{width}</div>
-              <div className="">
+              <div className="nav-display-m">=</div>
+              <div className="nav-display-d">
                 <div className="header-link-group">
                   <Link to="/Signin" className="link-all header-signin-link">
                     登入
@@ -47,7 +49,31 @@ function App() {
                   <Link to="/DateTime" className="link-all header-link">
                     學測倒數日期
                   </Link>
-                  {surveyDisplay ? (
+                  <div
+                    className="link-all header-link link-collection"
+                    onMouseOver={() => {
+                      setSurveyDisplay(true);
+                    }}
+                  >
+                    趣味問卷
+                    <div>
+                      <Link
+                        to="/FunnySurvey"
+                        className="link-all header-link is-active"
+                      >
+                        選擇型
+                      </Link>
+                    </div>
+                    <div>
+                      <Link
+                        to="/FunnySurvey2"
+                        className="link-all header-link is-active"
+                      >
+                        分數型
+                      </Link>
+                    </div>
+                  </div>
+                  {/*  {surveyDisplay ? (
                     <>
                       <div
                         className="link-all header-link"
@@ -95,7 +121,7 @@ function App() {
                         趣味問卷
                       </div>
                     </>
-                  )}
+                  )} */}
                 </div>
               </div>
             </div>

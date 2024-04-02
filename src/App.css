@@ -15,37 +15,6 @@ p:#000
 
 */
 
-/* 
-todo 
-@media screen and (max-width: 320px) {
-  html {
-    padding: 0;
-    margin: 0;
-    background-color: unset;
-    font-size: unset;
-    font-weight: unset;
-  }
-  .app {
-    background-color: pink;
-  }
-}
- */
-
-/* 
-todo 
-@media screen and (min-width: 321qpx) {
-  html {
-    padding: 0;
-    margin: 0;
-    background-color: unset;
-    font-size: unset;
-    font-weight: unset;
-  }
-  .app {
-    background-color: yellow;
-  }
-}
- */
 @media screen and (min-width: 768px) {
   * {
     padding: 0;
@@ -53,6 +22,8 @@ todo
     background-color: unset;
     font-size: unset;
     font-weight: unset;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    letter-spacing: 0.1rem;
   }
 
   .app {
@@ -100,10 +71,28 @@ todo
     color: #417a71;
     font-size: 0.6rem;
   }
+
+  .nav-display-m {
+    display: none;
+  }
+  .nav-display-d {
+    display: flex;
+  }
+  .link-collection {
+    position: relative;
+  }
+  .link-collection:hover:after {
+    content: "top";
+    position: absolute;
+    text-align: center;
+  }
+  .is-active {
+    display: none;
+  }
+
   /* --------------------  Header ------------------- */
 
   .app-header {
-    /*         background-color: aliceblue; */
     min-height: 10vh;
   }
   .header-link-group {
@@ -251,6 +240,10 @@ todo
   /*  * Home  ========================== */
   .section {
     width: 50vw;
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
   }
   .section-01-p {
     text-align: center;
@@ -261,13 +254,24 @@ todo
     text-align: left;
     margin: 0 0 1rem 0;
     white-space: normal;
+    width: 30rem;
   }
   .section-01-p-3 {
     text-align: center;
-    margin: 0 0 2rem 0;
+    margin: 1rem 0 1rem 0;
     white-space: normal;
     color: #ff1654;
     font-weight: 600;
+  }
+
+  .section-01-p-4 {
+    color: #417a71;
+    margin: 1rem 0 0.4rem 0;
+  }
+
+  .section-01-p-5 {
+    color: #417a71;
+    margin: 0.6rem 0 0.6rem 0;
   }
   .section-02-li {
     margin: 0.6rem 1rem 0.4rem 1rem;
@@ -275,6 +279,7 @@ todo
   }
   .section-02-p-1 {
     text-align: center;
+    margin-top: 2rem;
   }
   .section-02-li-group {
     display: flex;
@@ -293,6 +298,7 @@ todo
     text-align: center;
     margin-bottom: 1rem;
   }
+
   /*  * Member Signin ========================== */
   .signin-input {
     border-width: 0.1rem;

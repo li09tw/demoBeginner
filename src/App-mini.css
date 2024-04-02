@@ -1,0 +1,29 @@
+/* 
+1rem =16px (初始值)
+
+ style > className > * > html  
+
+主要顏色 main-color:#81F4E1
+淡色 light-color:#e6fdf9
+淡色 light-color:#f2fefc
+對比色 shade-color:#34625a
+對比色 shade-color:#417a71
+background-color: #fff
+顯眼色：#FF1654
+title:#190933
+p:#000
+
+*/
+
+@media screen and (max-width: 320px) {
+  html {
+    padding: 0;
+    margin: 0;
+    background-color: unset;
+    font-size: unset;
+    font-weight: unset;
+  }
+  .app {
+    background-color: pink;
+  }
+}
