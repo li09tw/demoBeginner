@@ -40,7 +40,8 @@ p:#000
     justify-content: center;
   }
 
-  .link-all {
+  .link-all,
+  .link-all :visited {
     color: #190933;
     text-decoration: none;
     padding: 0.2rem 0.4rem 0.2rem 0.4rem;
@@ -74,7 +75,6 @@ p:#000
   /* --------------------  Header ------------------- */
 
   .app-header {
-    /*     background-color: #81f4e1; */
     min-height: 10vh;
     margin: 1rem 1rem 1rem 1rem;
     padding: 0 1rem 0 1rem;
@@ -90,7 +90,8 @@ p:#000
   .nav-logo {
     width: 6rem;
     height: 3rem;
-    background-color: #34625a;
+    background-color: #e6fdf9;
+    text-align: center;
   }
   .header-link-group {
     display: flex;
@@ -306,6 +307,12 @@ p:#000
   }
 
   /*  * Member Signin ========================== */
+  .signintest {
+    text-align: center;
+    font-size: 0.8rem;
+    color: #417a71;
+    margin: 0.4rem 0 0.2rem 0;
+  }
   .signin-input {
     border-width: 0.1rem;
     font-size: 0.8rem;
@@ -326,5 +333,17 @@ p:#000
     font-size: 0.8rem;
     color: #ff1654;
     text-align: center;
+  }
+
+  /*  * Member Manage ========================== */
+  .text-Welcome {
+    text-align: center;
+    margin: 2rem 0 1rem 0;
+  }
+  .text-info {
+    margin-top: 0.4rem;
+  }
+  .text-info-bottom {
+    margin-bottom: 2rem;
   }
 }
