@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import answerData from "./datas/answer.json";
 import { useNavigate } from "react-router-dom";
+import manager from "./datas/manager.json";
 
 /* 
 
@@ -13,7 +14,7 @@ import { useNavigate } from "react-router-dom";
 export default function FunnySurvey() {
   const navigate = useNavigate();
   const [modeSwitch, setModeSwitch] = useState("");
-
+  const [email, setEmail] = useState("");
   const [nickname, setNickname] = useState("");
   const [answer1, setAnswer1] = useState("");
   const [answer3, setAnswer3] = useState("");
@@ -61,6 +62,15 @@ export default function FunnySurvey() {
     }
   };
 
+  /* 如果已登入，自動填入 */
+  useEffect(() => {
+    if (sessionStorage.getItem("passToken") == manager[0].token) {
+      setEmail(manager[0].email);
+      setNickname(manager[0].name);
+    } else {
+    }
+  }, []);
+
   return (
     <>
       <div>
@@ -74,9 +84,10 @@ export default function FunnySurvey() {
               <input
                 className="Survey-inputText-style"
                 type="text"
-                required
                 minLength="3"
                 maxLength="50"
+                required
+                placeholder={nickname}
                 onChange={(e) => {
                   setNickname(e.target.value);
                 }}
@@ -87,10 +98,13 @@ export default function FunnySurvey() {
               <input
                 type="email"
                 className="Survey-inputText-style"
-                placeholder="此資料不送出任何地方，僅提供觀用"
+                placeholder={email}
                 pattern=".+@example\.com"
                 size="50"
                 required
+                onChange={(e) => {
+                  setEmail(e.target.value);
+                }}
               />
             </div>
             <div className="middle-middle">

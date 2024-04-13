@@ -3,13 +3,16 @@ export default () => {
     <>
       <div>
         <section className="section">
-          <div className="section-01-p">歡迎加入 React 初學網頁設計</div>
+          <div className="section-01-p">歡迎加入 React 初學前端 </div>
           <div className="section-01-p-2">
-            我是你們的雲端助教Zora，背景是資訊管系畢業，被朋友慫恿後，先跑來學React，摸了之後覺得這個框架很有趣也很友善，所以後面轉戰React
-            Native（雙平台app開發）。
+            我是你們的雲端助教Zora，背景是資管系畢業，被朋友慫恿後，先跑來學React，摸了之後覺得這個框架很有趣也很友善，所以後面轉戰React
+            Native。
           </div>
           <div className="section-01-p-2">
-            這裡希望幫助大家一起進入網頁設計的世界，React是一種框架，寫網頁有很多框架，React是Facebook開發及維護，目前這個框架很適合小型開發團隊、獨立開發商。
+            歡迎大家學完 React 之後，一起加入 React Native 手機雙平台開發。
+          </div>
+          <div className="section-01-p-2">
+            這裡希望幫助大家一起進入網頁的世界，React是一種框架，寫網頁有很多框架，React是Facebook開發及維護，目前這個框架很適合小型開發團隊、獨立開發者。
           </div>
           <div className="section-01-p-4">有學過HTML,JS,CSS的人 :</div>
           <div className="section-01-p-2">
@@ -33,15 +36,16 @@ export default () => {
         </section>
 
         <section className="section">
-          <div className="section-02-p-1">這堂課會帶大家一起看：</div>
-          <ol className="section-02-li-group">
-            <li className="section-02-li">常用 Javascript 基本語法和概念</li>
-            <li className="section-02-li">不同產業/不同目的使用的網頁設計</li>
+          <ul className="section-02-li-group">
+            <div className="section-02-p-1">這堂課會帶大家一起:</div>
+            <li className="section-02-li">常用 Javascript 語法</li>
             <li className="section-02-li">常用 CSS 基本語法</li>
             <li className="section-02-li">好用的第三方套件</li>
-            <li className="section-02-li">設計 6 個或以上靜態頁面</li>
-            <li className="section-02-li">上架/發布靜態網頁（免付費）</li>
-          </ol>
+            <li className="section-02-li">不同產業/目的網頁設計</li>
+            <li className="section-02-li">設計 6 個以上靜態頁面</li>
+            <li className="section-02-li">資料庫基本概念</li>
+            <li className="section-02-li">發布靜態網頁</li>
+          </ul>
         </section>
 
         <section className="section">

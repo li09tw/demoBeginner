@@ -16,7 +16,7 @@ export default function FunnySurvey2() {
   return (
     <>
       <div>
-        <div style={{ marginTop: "6rem" }}>
+        <div style={{ marginTop: "1rem" }}>
           <p className="middle-middle Survey-option-style">
             僅提供示範”以分數作為基礎相加的“心裡問卷
           </p>

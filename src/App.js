@@ -61,73 +61,68 @@ function App() {
         <Context.Provider value={{ authState, setAuthState }}>
           <BrowserRouter>
             <section className="app-header">
-              <div className="nav-display-L">
+              <div className="header-logo-group">
                 <div className="nav-logo">{width}</div>
               </div>
+              <div className="header-link-group">
+                {authState.status ? (
+                  <>
+                    <Link to="/Member" className="link-all header-signin-link">
+                      會員資料
+                    </Link>
+                    <Link
+                      to="/Signin"
+                      className="link-all header-signin-link"
+                      onClick={btnSignout}
+                    >
+                      登出
+                    </Link>
+                  </>
+                ) : (
+                  <>
+                    <Link to="/Signin" className="link-all header-signin-link">
+                      登入
+                    </Link>
+                  </>
+                )}
 
-              <div className="nav-display-R">
-                <div className="header-link-group">
-                  {authState.status ? (
+                <Link to="/" className="link-all header-link">
+                  首頁
+                </Link>
+                <Link to="/" className="link-all header-link">
+                  課程消息
+                </Link>
+                <Link to="/DateTime" className="link-all header-link">
+                  學測倒數
+                </Link>
+                <div
+                  className="link-all header-link"
+                  onMouseOver={() => {
+                    setSurveyDisplay(true);
+                  }}
+                  onMouseLeave={() => {
+                    setSurveyDisplay(false);
+                  }}
+                >
+                  趣味問卷
+                  {surveyDisplay ? (
                     <>
-                      <Link
-                        to="/Member"
-                        className="link-all header-signin-link"
-                      >
-                        會員資料
-                      </Link>
-                      <Link
-                        to="/Signin"
-                        className="link-all header-signin-link"
-                        onClick={btnSignout}
-                      >
-                        登出
-                      </Link>
+                      <div className="header-link-sub">
+                        <div className="link-all ">
+                          <Link to="/FunnySurvey">選擇型</Link>
+                        </div>
+                        <div className="link-all">
+                          <Link to="/FunnySurvey2">分數型</Link>
+                        </div>
+                      </div>
                     </>
                   ) : (
-                    <>
-                      <Link
-                        to="/Signin"
-                        className="link-all header-signin-link"
-                      >
-                        登入
-                      </Link>
-                    </>
+                    <></>
                   )}
-
-                  <Link to="/" className="link-all header-link">
-                    首頁
-                  </Link>
-                  <Link to="/DateTime" className="link-all header-link">
-                    學測倒數
-                  </Link>
-                  <div
-                    className="link-all header-link"
-                    onMouseOver={() => {
-                      setSurveyDisplay(true);
-                    }}
-                    onMouseLeave={() => {
-                      setSurveyDisplay(false);
-                    }}
-                  >
-                    趣味問卷
-                    {surveyDisplay ? (
-                      <>
-                        <div className="header-link-sub">
-                          <div className="link-all ">
-                            <Link to="/FunnySurvey">選擇型</Link>
-                          </div>
-                          <div className="link-all">
-                            <Link to="/FunnySurvey2">分數型</Link>
-                          </div>
-                        </div>
-                      </>
-                    ) : (
-                      <></>
-                    )}
-                  </div>
                 </div>
               </div>
             </section>
+
             <section className="app-body">
               {/* --------body  展示區域------ */}
               <Routes>
@@ -153,7 +148,7 @@ function App() {
                 <p className="link-all footer-p ">隱私權聲明</p>
               </div>
               <div>
-                <p className="footer-p "> 著作權©2024 Zora Li </p>
+                <p className="footer-p "> 著作權©2024 Machlolophus.com </p>
               </div>
             </section>
           </BrowserRouter>
