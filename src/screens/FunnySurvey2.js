@@ -10,7 +10,6 @@ export default function FunnySurvey2() {
 
   const btnSubmit = () => {
     /* 得到最終分數 */
-    setAnswerGrade(answerGrade1 + answerGrade2 + answerGrade3);
   };
 
   return (
@@ -37,11 +36,13 @@ export default function FunnySurvey2() {
                 <label className="Survey-option-style-single">
                   <input
                     type="radio"
-                    value="0"
+                    value="1"
                     name="Q1"
                     onClick={(e) => {
-                      const num = Number(answerGrade) + Number(e.target.value);
-                      setAnswerGrade(num);
+                      setAnswerGrade1(1);
+                      setAnswerGrade(
+                        answerGrade1 + answerGrade2 + answerGrade3
+                      );
                     }}
                   />
                   粉紅色
@@ -49,11 +50,13 @@ export default function FunnySurvey2() {
                 <label className="Survey-option-style-single">
                   <input
                     type="radio"
-                    value="1"
+                    value="2"
                     name="Q1"
                     onClick={(e) => {
-                      const num = Number(answerGrade) + Number(e.target.value);
-                      setAnswerGrade(num);
+                      setAnswerGrade1(2);
+                      setAnswerGrade(
+                        answerGrade1 + answerGrade2 + answerGrade3
+                      );
                     }}
                   />
                   暗色
@@ -61,11 +64,13 @@ export default function FunnySurvey2() {
                 <label className="Survey-option-style-single">
                   <input
                     type="radio"
-                    value="2"
+                    value="3"
                     name="Q1"
                     onClick={(e) => {
-                      const num = Number(answerGrade) + Number(e.target.value);
-                      setAnswerGrade(num);
+                      setAnswerGrade1(3);
+                      setAnswerGrade(
+                        answerGrade1 + answerGrade2 + answerGrade3
+                      );
                     }}
                   />
                   綠色
@@ -83,11 +88,13 @@ export default function FunnySurvey2() {
                 <label className="Survey-option-style-single">
                   <input
                     type="radio"
-                    value="2"
+                    value="5"
                     name="Q2"
                     onClick={(e) => {
-                      const num = Number(answerGrade) + Number(e.target.value);
-                      setAnswerGrade(num);
+                      setAnswerGrade2(5);
+                      setAnswerGrade(
+                        answerGrade1 + answerGrade2 + answerGrade3
+                      );
                     }}
                   />
                   舒爽
@@ -95,11 +102,13 @@ export default function FunnySurvey2() {
                 <label className="Survey-option-style-single">
                   <input
                     type="radio"
-                    value="4"
+                    value="6"
                     name="Q2"
                     onClick={(e) => {
-                      const num = Number(answerGrade) + Number(e.target.value);
-                      setAnswerGrade(num);
+                      setAnswerGrade2(6);
+                      setAnswerGrade(
+                        answerGrade1 + answerGrade2 + answerGrade3
+                      );
                     }}
                   />
                   悶熱
@@ -107,11 +116,13 @@ export default function FunnySurvey2() {
                 <label className="Survey-option-style-single">
                   <input
                     type="radio"
-                    value="6"
+                    value="7"
                     name="Q2"
                     onClick={(e) => {
-                      const num = Number(answerGrade) + Number(e.target.value);
-                      setAnswerGrade(num);
+                      setAnswerGrade2(7);
+                      setAnswerGrade(
+                        answerGrade1 + answerGrade2 + answerGrade3
+                      );
                     }}
                   />
                   冷
@@ -132,8 +143,10 @@ export default function FunnySurvey2() {
                     value="10"
                     name="Q3"
                     onClick={(e) => {
-                      const num = Number(answerGrade) + Number(e.target.value);
-                      setAnswerGrade(num);
+                      setAnswerGrade3(10);
+                      setAnswerGrade(
+                        answerGrade1 + answerGrade2 + answerGrade3
+                      );
                     }}
                   />
                   很Local
@@ -144,8 +157,10 @@ export default function FunnySurvey2() {
                     value="20"
                     name="Q3"
                     onClick={(e) => {
-                      const num = Number(answerGrade) + Number(e.target.value);
-                      setAnswerGrade(num);
+                      setAnswerGrade3(20);
+                      setAnswerGrade(
+                        answerGrade1 + answerGrade2 + answerGrade3
+                      );
                     }}
                   />
                   很優雅
@@ -156,8 +171,10 @@ export default function FunnySurvey2() {
                     value="30"
                     name="Q3"
                     onClick={(e) => {
-                      const num = Number(answerGrade) + Number(e.target.value);
-                      setAnswerGrade(num);
+                      setAnswerGrade3(30);
+                      setAnswerGrade(
+                        answerGrade1 + answerGrade2 + answerGrade3
+                      );
                     }}
                   />
                   很輕鬆
