@@ -4,12 +4,17 @@ export default function FunnySurvey2() {
   const [answerGrade, setAnswerGrade] = useState(Number(0));
 
   /* 每個問題用不同的變數去控制單一問題的分數，每次切換都重新設定，請參照 FunnySurvey */
-  const [answerGrade1, setAnswerGrade1] = useState(Number(0));
-  const [answerGrade2, setAnswerGrade2] = useState(Number(0));
-  const [answerGrade3, setAnswerGrade3] = useState(Number(0));
+  const [answerGrade1, setAnswerGrade1] = useState(Number());
+  const [answerGrade2, setAnswerGrade2] = useState(Number());
+  const [answerGrade3, setAnswerGrade3] = useState(Number());
+
+  useEffect(() => {
+    setAnswerGrade(answerGrade1 + answerGrade2 + answerGrade3);
+  }, []);
 
   const btnSubmit = () => {
     /* 得到最終分數 */
+    setAnswerGrade(answerGrade1 + answerGrade2 + answerGrade3);
   };
 
   return (
@@ -36,13 +41,10 @@ export default function FunnySurvey2() {
                 <label className="Survey-option-style-single">
                   <input
                     type="radio"
-                    value="1"
+                    value={1}
                     name="Q1"
-                    onClick={(e) => {
-                      setAnswerGrade1(1);
-                      setAnswerGrade(
-                        answerGrade1 + answerGrade2 + answerGrade3
-                      );
+                    onChange={(e) => {
+                      setAnswerGrade1(Number(e.target.value));
                     }}
                   />
                   粉紅色
@@ -50,13 +52,10 @@ export default function FunnySurvey2() {
                 <label className="Survey-option-style-single">
                   <input
                     type="radio"
-                    value="2"
+                    value={2}
                     name="Q1"
                     onClick={(e) => {
-                      setAnswerGrade1(2);
-                      setAnswerGrade(
-                        answerGrade1 + answerGrade2 + answerGrade3
-                      );
+                      setAnswerGrade1(Number(e.target.value));
                     }}
                   />
                   暗色
@@ -64,13 +63,10 @@ export default function FunnySurvey2() {
                 <label className="Survey-option-style-single">
                   <input
                     type="radio"
-                    value="3"
+                    value={3}
                     name="Q1"
                     onClick={(e) => {
-                      setAnswerGrade1(3);
-                      setAnswerGrade(
-                        answerGrade1 + answerGrade2 + answerGrade3
-                      );
+                      setAnswerGrade1(Number(e.target.value));
                     }}
                   />
                   綠色
@@ -88,13 +84,10 @@ export default function FunnySurvey2() {
                 <label className="Survey-option-style-single">
                   <input
                     type="radio"
-                    value="5"
+                    value={5}
                     name="Q2"
                     onClick={(e) => {
-                      setAnswerGrade2(5);
-                      setAnswerGrade(
-                        answerGrade1 + answerGrade2 + answerGrade3
-                      );
+                      setAnswerGrade2(Number(e.target.value));
                     }}
                   />
                   舒爽
@@ -102,13 +95,10 @@ export default function FunnySurvey2() {
                 <label className="Survey-option-style-single">
                   <input
                     type="radio"
-                    value="6"
+                    value={6}
                     name="Q2"
                     onClick={(e) => {
-                      setAnswerGrade2(6);
-                      setAnswerGrade(
-                        answerGrade1 + answerGrade2 + answerGrade3
-                      );
+                      setAnswerGrade2(Number(e.target.value));
                     }}
                   />
                   悶熱
@@ -116,13 +106,10 @@ export default function FunnySurvey2() {
                 <label className="Survey-option-style-single">
                   <input
                     type="radio"
-                    value="7"
+                    value={7}
                     name="Q2"
                     onClick={(e) => {
-                      setAnswerGrade2(7);
-                      setAnswerGrade(
-                        answerGrade1 + answerGrade2 + answerGrade3
-                      );
+                      setAnswerGrade2(Number(e.target.value));
                     }}
                   />
                   冷
@@ -140,13 +127,10 @@ export default function FunnySurvey2() {
                 <label className="Survey-option-style-single">
                   <input
                     type="radio"
-                    value="10"
+                    value={10}
                     name="Q3"
                     onClick={(e) => {
-                      setAnswerGrade3(10);
-                      setAnswerGrade(
-                        answerGrade1 + answerGrade2 + answerGrade3
-                      );
+                      setAnswerGrade3(Number(e.target.value));
                     }}
                   />
                   很Local
@@ -154,13 +138,10 @@ export default function FunnySurvey2() {
                 <label className="Survey-option-style-single">
                   <input
                     type="radio"
-                    value="20"
+                    value={20}
                     name="Q3"
                     onClick={(e) => {
-                      setAnswerGrade3(20);
-                      setAnswerGrade(
-                        answerGrade1 + answerGrade2 + answerGrade3
-                      );
+                      setAnswerGrade3(Number(e.target.value));
                     }}
                   />
                   很優雅
@@ -168,19 +149,25 @@ export default function FunnySurvey2() {
                 <label className="Survey-option-style-single">
                   <input
                     type="radio"
-                    value="30"
+                    value={30}
                     name="Q3"
                     onClick={(e) => {
-                      setAnswerGrade3(30);
-                      setAnswerGrade(
-                        answerGrade1 + answerGrade2 + answerGrade3
-                      );
+                      setAnswerGrade3(Number(e.target.value));
                     }}
                   />
                   很輕鬆
                 </label>
               </div>
             </div>
+          </div>
+          <div className="middle-middle" style={{ marginBottom: "4rem" }}>
+            <button
+              type="submit"
+              className="Survey-btn-submit"
+              onClick={btnSubmit}
+            >
+              送出
+            </button>
           </div>
         </div>
       </div>
